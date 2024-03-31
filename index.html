@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/css/reset.css" rel="stylesheet" />
+  <link href="/src/css/index.css" rel="stylesheet" />
+  <title>Projet BDE MMI Bordeaux Montaigne 24/25</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="#">Accueil</a></li>
+        <li><a href="#pourquoi-nous">Pourquoi nous ?</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#team">Notre équipe</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="loader" class="loader"></div>
+    <script>
+      window.addEventListener('load', function() {
+        var loader = document.getElementById('loader');
+        loader.style.display = 'none';
+        document.querySelector('main').style.visibility = 'visible'; // Sélectionnez la balise main correctement
+      });
+    </script>
+    <section class="home-top">
+      <div class="content-home-top grid">
+        <h1>Votez pour vous !</h1>
+        <a class="button">Nous découvrir</a>
+      </div>
+    </section>
+    <section class="number-section grid">
+      <h2>✨ Pour un BDE qui tient la route ✨</h2>
+      <p class="subtitle">Les 3 chiffres pour nous connaitre</p>
+      <div class="flex-number">
+        <div class="number-card">
+          <p class="number" data-count="7">0</p>
+          <p class="text-number">C’est le nombre de p’tites têtes dans notre équipe</p>
+        </div>
+        <div class="number-card">
+          <p class="number" data-count="8">0</p>
+          <p class="text-number">C’est le nombre d’idées révolutionnaires </p>
+        </div>
+        <div class="number-card">
+          <p class="number">JSP</p>
+          <p class="text-number">Non vraiment j’ai pas d’inspi</p>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $('.number-section').waypoint(function () {
+            $('.number').each(function () {
+              var $this = $(this);
+              var countTo = $this.attr('data-count');
+
+              $({
+                countNum: $this.text()
+              }).animate({
+                countNum: countTo
+              }, {
+                duration: 1000,
+                easing: 'linear',
+                step: function () {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                  $this.text(this.countNum);
+                }
+              });
+            });
+          }, {
+            offset: '80%'
+          }); // Ajustez la valeur offset selon vos besoins
+        });
+      </script>
+    </section>
+    <section id="pourquoi-nous" class="why-us">
+      <div class="content-why-us grid">
+        <div class="img-team">
+          <img src="/src/image/team.png">
+        </div>
+        <div class="box-text">
+          <h2>Pourquoi-nous ?</h2>
+          <span class="prog-subtitle">(bah pourquoi pas)</span>
+          <p class="text">Worem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est
+            a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+            tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+            egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna.
+            Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+          </p>
+          <a href="">Notre programme</a>
+        </div>
+      </div>
+    </section>
+    <section id="programme" class="programme grid">
+      <h2>Notre programme</h2>
+      <div class="flex-prog">
+        <div class="card-prog">
+          <p class="title-prog">🧺 Panier repas</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">🍿 Soirée ciné</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">🪩 Soirées</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">🧶 Pull</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">⛺️ W.E.I.</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">🫱🏽‍🫲🏼 Partenariats</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">💻 Site Web</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+        <div class="card-prog">
+          <p class="title-prog">📸 Photo de promo</p>
+          <div class="description-prog">Description du panier repas</div>
+        </div>
+
+      </div>
+    </section>
+    <section id="team" class="team grid">
+      <h2>Notre équipe</h2>
+      <div class="parent">
+        <div class="div1">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">RIQUIER Thomas</p>
+          <p class="role">Président</p>
+        </div>
+        <div class="div2">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">RAKOTONARIVO Dina</p>
+          <p class="role">Secrétaire</p>
+        </div>
+        <div class="div3">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">CABARET Line </p>
+          <p class="role">Trésorière</p>
+        </div>
+        <div class="div4">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">GARBUIO--BINAUD Eva</p>
+          <p class="role">Événementiel</p>
+        </div>
+        <div class="div5">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">LE DOUSSAL Louis</p>
+          <p class="role">CM</p>
+        </div>
+        <div class="div6">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">QUEMERE Edgar</p>
+          <p class="role">Graphiste</p>
+        </div>
+        <div class="div7">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">NUNEZ Noémie</p>
+          <p class="role">Designer</p>
+        </div>
+        <div class="div8">
+          <img src="/src/image/profil.jpg" alt="">
+          <p class="name">RIQUIER Thomas </p>
+          <p class="role">Président</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>test</p>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      var sections = document.querySelectorAll('section'); // Ignorer la section avec l'ID "programme"
+      var navLinks = document.querySelectorAll('nav ul li a');
+
+      sections.forEach(function (section) {
+        var top = section.offsetTop - 100;
+        var bottom = top + section.clientHeight;
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition >= top && scrollPosition < bottom) {
+          var targetId = section.id;
+          navLinks.forEach(function (navLink) {
+            if (navLink.getAttribute('href') === '#' + targetId) {
+              navLinks.forEach(function (link) {
+                link.classList.remove('active');
+              });
+              navLink.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
