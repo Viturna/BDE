@@ -5,41 +5,6 @@
   src: url('../font/Handlee-Regular.woff2') format('woff2');
   font-display: swap;
 }
-.loader {
-  display: block;
-  --height-of-loader: 4px;
-  --loader-color: #42065E;
-  width: 130px;
-  height: var(--height-of-loader);
-  border-radius: 30px;
-  background-color: rgba(0,0,0,0.2);
-  position: relative;
-}
-
-.loader::before {
-  content: "";
-  position: fixed;
-  background: var(--loader-color);
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  border-radius: 30px;
-  animation: moving 1s ease-in-out infinite;
-  ;
-}
-
-@keyframes moving {
-  50% {
-    width: 100%;
-  }
-
-  100% {
-    width: 0;
-    right: 0;
-    left: unset;
-  }
-}
 body {
   font-family: 'Nimbus sans L';
 }
@@ -54,20 +19,20 @@ header {
   justify-content: center;
   position: fixed;
   top: 0;
-  background-color: #BB9CCA;
-  z-index: 999;
+  /* background-color: #F6F2F8; */
+  z-index: 99;
 }
 
 header nav ul {
   display: flex;
   list-style: none;
-  gap: 24px;
+  gap: 32px;
 }
 
 header nav a {
   text-transform: uppercase;
   font-size: 16px;
-  color: #FFF;
+  color: #3E3E3E;
 }
 
 header nav .active {
@@ -77,14 +42,34 @@ header nav .active {
 h1{
   text-transform: uppercase;
   padding-top: 136px;
-  color: #fff;
+  color: #323232;
   font-weight: 700;
   font-size: 64px;
+  width: 90%;
+  text-align: right;
+}
+.button{
+  margin-top: 24px;
+  background-color: #42065E;
+  color: #FFF;
+  padding: 25px 60px;
+  width: 110px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.button:hover{
+  background-color: #8E5AA6;
 }
 h2 {
   font-weight: 700;
   color: #323232;
   font-size: 28px;
+}
+.subtitle{
+  color: #3E3E3E;
+  font-size: 18px;
+  margin-top: 8px;
 }
 span{
   font-family: 'Handlee';
@@ -94,20 +79,46 @@ span{
   color: #fff;
   font-size: 18px;
 }
+.prog-button{
+  color: #FFF;
+}
+.prog-button:hover{
+  opacity: 0.8;
+}
+.prog-button svg {
+  margin-left: 8%;
+}
+.box-text .text{
+  margin-bottom: 32px;
+}
 .home-top {
   background-image: url('../image/bg-home-top.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #BB9CCA;
-  height: 1024px;
+  background-size: cover;
+  width: 100vw;
+  height: 900px;
 }
-
+.content-home-top{
+  display: flex; /* Utilisation de flexbox pour organiser les éléments */
+  align-items: center; /* Centrer verticalement les éléments */
+  justify-content: space-between; /* Espacement uniforme entre les éléments */
+  height: 700px;
+}
+.content-home-top-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .number-section{
   margin: 128px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.number-section h2{
+  color: #42065E;
+  text-align: center;
 }
 .flex-number{
   width: 80vw;
@@ -250,7 +261,7 @@ span{
 .parent {
   margin-top: 64px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 64px;
@@ -268,37 +279,13 @@ span{
   height: 100px;
   margin-bottom: 16px;
 }
-.div1 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-.div2 {
-  grid-area: 1 / 3 / 2 / 4;
-}
-
-.div3 {
-  grid-area: 2 / 1 / 3 / 2;
-}
-
-.div4 {
-  grid-area: 2 / 2 / 3 / 3;
-}
-
-.div5 {
-  grid-area: 2 / 3 / 3 / 4;
-}
-
-.div6 {
-  grid-area: 2 / 4 / 3 / 5;
-}
-
-.div7 {
-  grid-area: 3 / 2 / 4 / 3;
-}
-
-.div8 {
-  grid-area: 3 / 3 / 4 / 4;
-}
+.div1 { grid-area: 1 / 2 / 2 / 4; }
+.div2 { grid-area: 1 / 4 / 2 / 6; }
+.div3 { grid-area: 2 / 1 / 3 / 3; }
+.div4 { grid-area: 2 / 3 / 3 / 5; }
+.div5 { grid-area: 2 / 5 / 3 / 7; }
+.div6 { grid-area: 3 / 2 / 4 / 4; }
+.div7 { grid-area: 3 / 4 / 4 / 6; }
 
 .name {
   font-size: 24px;

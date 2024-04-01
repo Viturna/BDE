@@ -21,22 +21,17 @@
     </nav>
   </header>
   <main>
-    <div id="loader" class="loader"></div>
-    <script>
-      window.addEventListener('load', function() {
-        var loader = document.getElementById('loader');
-        loader.style.display = 'none';
-        document.querySelector('main').style.visibility = 'visible'; // Sélectionnez la balise main correctement
-      });
-    </script>
     <section class="home-top">
       <div class="content-home-top grid">
-        <h1>Votez pour vous !</h1>
-        <a class="button">Nous découvrir</a>
+        <img src="/src/image/team2.png" alt="">
+        <div class="content-home-top-text">
+          <h1>Votez pour vous !</h1>
+          <a href="#pourquoi-nous" class="button">Nous découvrir</a>
+        </div>
       </div>
     </section>
     <section class="number-section grid">
-      <h2>✨ Pour un BDE qui tient la route ✨</h2>
+      <span class="star">✨</span><h2>Pour un BDE <br>qui tient la route</h2><span class="star">✨</span>
       <p class="subtitle">Les 3 chiffres pour nous connaitre</p>
       <div class="flex-number">
         <div class="number-card">
@@ -98,7 +93,12 @@
             egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna.
             Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
           </p>
-          <a href="">Notre programme</a>
+          <a class="prog-button" href="#programme">
+            Notre programme
+             <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6.74691 6.6192C7.2662 7.12693 8.09596 7.12693 8.61524 6.6192L14.3622 1" stroke="white" stroke-width="1.48468" stroke-linecap="round"/>
+            </svg>
+            </a>
         </div>
       </div>
     </section>
@@ -144,17 +144,17 @@
       <h2>Notre équipe</h2>
       <div class="parent">
         <div class="div1">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-thomas.jpg" alt="">
           <p class="name">RIQUIER Thomas</p>
           <p class="role">Président</p>
         </div>
         <div class="div2">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-dina.jpg" alt="">
           <p class="name">RAKOTONARIVO Dina</p>
           <p class="role">Secrétaire</p>
         </div>
         <div class="div3">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-line.jpg" alt="">
           <p class="name">CABARET Line </p>
           <p class="role">Trésorière</p>
         </div>
@@ -169,19 +169,14 @@
           <p class="role">CM</p>
         </div>
         <div class="div6">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-edgar.jpg" alt="">
           <p class="name">QUEMERE Edgar</p>
           <p class="role">Graphiste</p>
         </div>
         <div class="div7">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-noemie.jpg" alt="">
           <p class="name">NUNEZ Noémie</p>
           <p class="role">Designer</p>
-        </div>
-        <div class="div8">
-          <img src="/src/image/profil.jpg" alt="">
-          <p class="name">RIQUIER Thomas </p>
-          <p class="role">Président</p>
         </div>
       </div>
     </section>
