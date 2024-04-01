@@ -12,26 +12,55 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a class="active" href="#">Accueil</a></li>
         <li><a href="#pourquoi-nous">Pourquoi nous ?</a></li>
         <li><a href="#programme">Programme</a></li>
         <li><a href="#team">Notre équipe</a></li>
       </ul>
+      <div class="menu-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
   </header>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.querySelector('.menu-btn');
+      const menu = document.querySelector('.menu');
+
+      const menuItem = document.querySelectorAll('.nav__link');
+      const bars = document.querySelectorAll('.bar');
+
+      menuBtn.addEventListener('click', function () {
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+        bars.forEach(bar => bar.classList.toggle('active'));
+      });
+
+      menuItem.forEach(menuItem => {
+        menuItem.addEventListener('click', function () {
+          menuBtn.classList.toggle('active');
+          menu.classList.toggle('active');
+          bars.forEach(bar => bar.classList.toggle('active'));
+        });
+      });
+    });
+  </script>
   <main>
     <section class="home-top">
       <div class="content-home-top grid">
-        <img src="/src/image/team2.png" alt="">
+        <img class="image-home" src="/src/image/team2.png" alt="">
         <div class="content-home-top-text">
-          <h1>Votez pour vous !</h1>
+          <h1>Votez pour <span>vous !</span></h1>
           <a href="#pourquoi-nous" class="button">Nous découvrir</a>
         </div>
       </div>
     </section>
     <section class="number-section grid">
-      <span class="star">✨</span><h2>Pour un BDE <br>qui tient la route</h2><span class="star">✨</span>
+      <span class="star">✨</span>
+      <h2>Pour un BDE <br>qui tient la route</h2><span class="star">✨</span>
       <p class="subtitle">Les 3 chiffres pour nous connaitre</p>
       <div class="flex-number">
         <div class="number-card">
@@ -86,19 +115,21 @@
         <div class="box-text">
           <h2>Pourquoi-nous ?</h2>
           <span class="prog-subtitle">(bah pourquoi pas)</span>
-          <p class="text">Worem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est
-            a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
-            egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna.
-            Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+          <p class="text">
+            Nous sommes une équipe <span class="bold">dynamique et motivée</span>, prête à vous offrir une multitude d'événements pour votre année
+            2024-2025. Notre objectif principal est de créer un environnement où chaque étudiant sera représenté.<br>
+            Notre véritable force réside dans notre <span class="bold">diversité</span>. Nous avons soigneusement composé notre équipe en
+            rassemblant des étudiants représentant différents groupes d'amis au sein de notre promotion. Cette mixité
+            nous permet de véritablement </span>comprendre et représenter</span> les voix et les besoins de tous les étudiants MMI.<br>
+            Ensemble, nous créerons une expérience étudiante unique !
           </p>
           <a class="prog-button" href="#programme">
             Notre programme
-             <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6.74691 6.6192C7.2662 7.12693 8.09596 7.12693 8.61524 6.6192L14.3622 1" stroke="white" stroke-width="1.48468" stroke-linecap="round"/>
+            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6.74691 6.6192C7.2662 7.12693 8.09596 7.12693 8.61524 6.6192L14.3622 1" stroke="white"
+                stroke-width="1.48468" stroke-linecap="round" />
             </svg>
-            </a>
+          </a>
         </div>
       </div>
     </section>
@@ -107,35 +138,35 @@
       <div class="flex-prog">
         <div class="card-prog">
           <p class="title-prog">🧺 Panier repas</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Cette année, le BDE actuel nous a offert des paniers-repas composés de fruits et légumes provenant d’un agriculteur local et bio. Nous avons particulièrement apprécié ce projet et souhaitons donc le remettre en place, en vous en offrant même davantage si possible.</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">🍿 Soirée ciné</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Quoi de mieux qu’un bon fauteuil, du pop-corn, un bon film et des amis ? Quand les anciens ont de bonnes idées, on les garde. C’est pour cela que nous souhaitons continuer les soirées cinéma pour partager un agréable moment avec vous.</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">🪩 Soirées</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Comment parler du BDE sans évoquer les soirées étudiantes ? Nous allons animer vos jeudis soirs, c'est une certitude. Musique, ambiance étudiante, boissons, sécurité : voilà ce que nous cherchons à réunir.</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">🧶 Pull</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Bien évidemment, nous allons garder la tradition des pulls MMI. Le concours aura lieu comme les années précédentes ! Cette fois, nous essaierons d’obtenir les pulls plus tôt afin de pouvoir représenter MMI tout au long de l’année !</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">⛺️ W.E.I.</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">L’organisation du W.E.I. est notre plus grande motivation. Pour ceux qui ne connaissent pas, un W.E.I (Week-End d’Intégration) réunit tous les étudiants de MMI (parfois on se mélange avec les pubs) dans un camping pour 2 jours et 2 nuits. Le principe ? Regrouper les étudiants, créer des liens et des souvenirs mémorables. Au programme ? Des activités sportives, des soirées et toutes autres activités ! Alors, motivé ?</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">🫱🏽‍🫲🏼 Partenariats</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Le BDE souhaite continuer ses partenariats actuels, mais pourquoi pas en avoir davantage ? C’est hyper important pour créer des liens avec les commerçants locaux, mais aussi pour vous faire profiter ! N’hésitez pas à consulter notre future page “Partenariats” qui vous listera tous nos partenariats avec leur offre et localisation.</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">💻 Site Web</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Si vous êtes ici, c’est que ce n’est pas si inutile. Grâce à ce site, vous retrouverez toutes les informations en lien avec le BDE au même endroit ! Vous profiterez aussi d’un espace vous étant dédié pour nous communiquer vos idées.</div>
         </div>
         <div class="card-prog">
           <p class="title-prog">📸 Photo de promo</p>
-          <div class="description-prog">Description du panier repas</div>
+          <div class="description-prog">Pourquoi la photo de classe s’arrêterait au lycée ? Nous, on veut vous fournir une photo de votre promo ! Et si nous sommes efficaces, vous aurez même vos pulls MMI sur la photo. N’est-ce pas incroyable pour les souvenirs ?</div>
         </div>
 
       </div>
@@ -159,12 +190,12 @@
           <p class="role">Trésorière</p>
         </div>
         <div class="div4">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-eva.jpg" alt="">
           <p class="name">GARBUIO--BINAUD Eva</p>
           <p class="role">Événementiel</p>
         </div>
         <div class="div5">
-          <img src="/src/image/profil.jpg" alt="">
+          <img src="/src/image/profil-louis.jpg" alt="">
           <p class="name">LE DOUSSAL Louis</p>
           <p class="role">CM</p>
         </div>
