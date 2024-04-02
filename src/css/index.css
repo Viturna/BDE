@@ -237,7 +237,9 @@ span {
   flex-wrap: wrap;
   gap: 32px;
 }
-
+.mobile-prog{
+  display: none;
+}
 .card-prog {
   position: relative;
   display: flex;
@@ -272,7 +274,9 @@ span {
 .card-prog:hover .title-prog {
   display: none;
 }
-
+.card-prog:hover .mobile-prog {
+  display: none;
+}
 .card-prog:hover .description-prog {
   opacity: 1;
 }
@@ -515,9 +519,9 @@ footer {
   }
   .button {
     margin-top: 20vh;
-    padding: 25px 80px;
+    padding: 25px 70px;
     font-size: 14px;
-    width: 100px;
+    width: 90px;
   }
 
 
@@ -567,8 +571,8 @@ footer {
   }
 
   .img-team img {
-    width: 305px;
-    height: 180px;
+    width: 205px;
+    height: 120px;
   }
 
   .box-text .text {
@@ -590,7 +594,12 @@ footer {
     flex-direction: column;
     gap: 24px;
   }
-
+  .mobile-prog{
+    display: block;
+    color: #FFF;
+    margin-top: 8px;
+    font-size: 14px;
+  }
   .card-prog {
     width: 90vw;
     height: 180px;
