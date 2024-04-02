@@ -394,6 +394,7 @@ footer {
 @media (min-width: 0px) and (max-width: 319px) {
   header {
     justify-content: flex-end;
+    height: 70px;
   }
 
   .menu-btn {
@@ -698,6 +699,7 @@ footer {
 @media (min-width: 320px) and (max-width: 575px) {
   header {
     justify-content: flex-end;
+    height: 70px;
   }
 
   .menu-btn {
@@ -1002,6 +1004,7 @@ footer {
 @media (min-width: 576px) and (max-width: 850px) {
   header {
     justify-content: flex-end;
+    height: 70px;
   }
 
   .menu-btn {
