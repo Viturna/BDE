@@ -5,6 +5,20 @@
   src: url('../font/Handlee-Regular.woff2') format('woff2');
   font-display: swap;
 }
+@font-face {
+  font-family: 'Nimbus sans L';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NimbusSanL-Reg.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nimbus sans L';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NimbusSanL-Bol.woff2') format('woff2');
+  font-display: swap;
+}
 
 body {
   font-family: 'Nimbus sans L';
